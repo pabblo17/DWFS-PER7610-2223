@@ -24,10 +24,6 @@ html {
     font-weight: bold;
 }
 
-.compra {
-   
-}
-
 .detalle-compra {
     padding-left: 10%;
     padding-top: 2%;
@@ -40,5 +36,8 @@ html {
 
 .total-compra{
     background-color: #F9F9F9;
+    padding-left: 30px;
+    padding-top: 2%;
+    padding-right: 30px;
    
 }
