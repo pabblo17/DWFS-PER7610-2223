@@ -71,9 +71,15 @@ li {
     color: rgba(238, 221, 74, 0.979);
 }
 
+li {
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: white;
+}
+
 .fa-circle{
     font-size: 8px;
-    color: rgb(230, 236, 236);
+    color: rgb(218, 231, 38);
 }
 
 .list-puntuation{
@@ -82,3 +88,18 @@ li {
     margin-right: 50px;
 }
 
+.pd{
+    padding-left: 15px;
+}
+
+.fa-phone, .fa-solid, .fa-circle, .checked {
+    color: #f1f566;
+  }
+
+  .text-section-small {
+    margin-bottom: unset;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: white;
+    font-size: 10px;
+    display: block;
+}
