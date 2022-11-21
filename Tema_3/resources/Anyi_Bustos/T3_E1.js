@@ -90,7 +90,7 @@ function obtenerLetraDni(dni) {
  */
  console.log(esPalindromo("Dabale arroz a la zorra el abad"));
  function esPalindromo(palabra) {
-    palabra = palabra.replace(/ /g, "")
+    palabra = palabra.replace(/ /g, "").toLowerCase()
     const reverse = (palabra) => {
         var splitString = palabra.split(""); 
         var reverseArray = splitString.reverse();

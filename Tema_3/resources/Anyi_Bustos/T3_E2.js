@@ -14,7 +14,12 @@
  * 
  * Ejemplo: duplicador([1,2,3,4]) -> [4,8]
  */
-
+console.log(duplicador([1,2,3,4]));
+function duplicador(numeros) {
+    const esPar = (x) => x % 2 == 0 ? true : false
+    return numeros.filter(num => esPar(num))
+    .map(numPar => numPar*2)
+}
 
 /**
  * Funcion 2
@@ -25,7 +30,11 @@
  * 
  * Ejemplo: media([1,2,3,4]) -> 2.5
  */
-
+console.log(media([1,2,3,4]));
+function media(numeros) {
+    const suma = (accu, actual) => accu+actual
+    return numeros.reduce(suma)/numeros.length
+}
 
 /**
  * Funcion 3
@@ -37,7 +46,19 @@
  * 
  * Ejemplo: eliminarDuplicados([5,1,2,1,3,3,4,5]) -> [2,4]
  */
+console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]))
+function eliminarDuplicados(numeros){
+    return numeros.filter(numero => {
+       let sumaRepetidos =  numeros.reduce(sumRepetidos(numero),0)
+       return sumaRepetidos == numero
+    });
+}
 
+function sumRepetidos(num) {
+    return (acc, curr) => {
+        return curr == num ? acc + curr : acc
+    }
+}
 
 /**
  * Funcion 4
@@ -56,7 +77,24 @@
  * Ejemplo: nCharConsec(*, 4, "Est** e* un ej**plo") -> false
  * 
  */
+console.log(nCharConsec('*', 4, "Est* *** e* un ej**plo"))
+function nCharConsec(carac, num, palabra){
 
+    //solución usando metodos de string
+    //return palabra.includes(carac.repeat(num))
+
+    //solución con funcion e primer orden
+    let encontro  = false
+    let palabraSlc = palabra.split("")
+    palabraSlc.forEach((letra, index) => {
+        if (letra == carac) {
+            if (carac.repeat(num)  == palabra.substring(index, index+num)){
+                encontro =true
+            }
+        }
+    })
+    return encontro
+}
 
 /**
  * Funcion 5
@@ -81,4 +119,20 @@
  * [7, 5] (2+6+7 /3 = 5)
  * [1, 4] (2+6+7+1 /4 = 4)
  */
+console.log(generador(6))
+function generador(tam){
+    let num = Array.from({length: tam}, () => Math.floor(Math.random() * 10));
+    let numFilter =  num.filter((valor, indice) => {
+        return num.indexOf(valor) === indice && valor != 0;
+    });
+
+    console.log(numFilter)
+    let gene = new Map();
+    let suma =0
+    numFilter.forEach((num,index) => {
+        suma +=num
+        gene.set(num,suma/(index+1));
+    })
+    return gene
+}
 
