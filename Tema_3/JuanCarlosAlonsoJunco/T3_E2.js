@@ -18,10 +18,7 @@ const element = "";
 var result = "";
 
 function duplicador (element){
-    const filtro = element.filter(element => element % 2 == 0);
-    return filtro.map(function(x){
-        return x * 2;
-    })
+    return element.filter(element => element % 2 == 0).map(x => x * 2 );
 }
 console.log(duplicador([1,2,3,4]));
 
@@ -35,10 +32,7 @@ console.log(duplicador([1,2,3,4]));
  * Ejemplo: media([1,2,3,4]) -> 2.5
  */
 function media(element){
-    const longitud = element.lenght;
-    const reducer = (acumulador,currentValue) => acumulador + currentValue;
-    const reduccion = element.reduce(reducer);
-    return reduccion;
+    return element.reduce((accumulator, currentValue) => accumulator + currentValue, 0) /element.length;
 }
 console.log(media([1,2,3,4]));
 console.log()
@@ -54,8 +48,14 @@ console.log()
  * 
  * Ejemplo: eliminarDuplicados([5,1,2,1,3,3,4,5]) -> [2,4]
  */
+function eliminarDuplicados(element){
+    let unicos = new Set();
+    element.forEach(x => unicos.add(x));
+    return Array.from(unicos);
 
+}
 
+console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]));
 /**
  * Funcion 4
  * 
