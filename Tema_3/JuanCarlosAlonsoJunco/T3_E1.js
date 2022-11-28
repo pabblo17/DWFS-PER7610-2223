@@ -36,7 +36,7 @@ function obtenerLetraDni(numero){
     return console.log(dni);
 }
 
-obtenerLetraDni(123456789);
+obtenerLetraDni(12345678);
 obtenerLetraDni();
 obtenerLetraDni(99999999999);
 

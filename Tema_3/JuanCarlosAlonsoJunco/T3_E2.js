@@ -74,6 +74,29 @@ console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]));
  * 
  */
 
+function nCharConsec(rep,num,cadena){
+    let consec = false;
+    let contador = 0;
+    let arrayCadena = cadena.split('');
+    arrayCadena.forEach( element => {
+        if(contador == num){
+            consec = true;
+        }
+        else{
+            if(element === rep){
+            contador += 1;
+            }
+            else{
+            contador = 0;
+            }
+        }
+    });
+    return consec;
+}
+
+console.log(nCharConsec('*', 4, 'Est* *** es un ejemplo'));
+console.log(nCharConsec('*', 4, 'Est**** es un ejemplo'));
+console.log(nCharConsec('*', 4, 'Est** e* un ej**plo'));
 
 /**
  * Funcion 5
@@ -98,4 +121,23 @@ console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]));
  * [7, 5] (2+6+7 /3 = 5)
  * [1, 4] (2+6+7+1 /4 = 4)
  */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+function generador(num){
+    let arrayAleatorio = [];
+    for(let i = 0; i<num; i++){
+        arrayAleatorio.push(getRandomInt(num));
+    }
+    let sinDup = eliminarDuplicados(arrayAleatorio);
+    let arraySinDup = [];
+    let mapaSinDup = new Map();
+    sinDup.forEach(element => {
+        arraySinDup.push(element);
+        mapaSinDup.set(element,media(arraySinDup));
 
+    });
+    return mapaSinDup;
+}
+
+console.log(generador(6));
