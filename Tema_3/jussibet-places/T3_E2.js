@@ -16,7 +16,7 @@
  */
 array2 = [1, 2, 3, 4];
 const duplicador = (array) => array.filter((z) => z % 2 == 0);
-console.log("Ejercicio 1");
+console.log("Ejercicio 1: ");
 console.log(duplicador(array2).map((val) => val * 2));
 
 /**
@@ -31,7 +31,7 @@ console.log(duplicador(array2).map((val) => val * 2));
 
 array2 = [1, 2, 3, 4];
 const media = (array) => array.reduce((a, b) => (b += a)) / array.length;
-console.log("Ejercicio 2");
+console.log("Ejercicio 2: ");
 console.log(media(array2));
 
 /**
@@ -55,7 +55,7 @@ const eliminarDuplicados = (array) => {
   });
   return lisfinal;
 };
-console.log("Ejercicio 3");
+console.log("Ejercicio 3: ");
 console.log(eliminarDuplicados([5, 1, 2, 1, 3, 3, 4, 5]));
 
 /**
@@ -82,7 +82,7 @@ const nCharConsec = (caracter, numero, cadena) => {
   );
   return cadena1.length == numero;
 };
-console.log("Ejercicio 4");
+console.log("Ejercicio 4: ");
 console.log(nCharConsec("*", 4, "Est**** es un ejemplo"));
 
 /**
@@ -127,5 +127,5 @@ const generador = (numero) => {
   return map;
   //console.table(map);
 };
-console.log("Ejercicio 5");
+console.log("Ejercicio 5: ");
 console.table(generador(6));
