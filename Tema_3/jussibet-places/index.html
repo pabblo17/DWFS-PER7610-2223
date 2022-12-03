@@ -5,11 +5,11 @@
     <title>Caja de chistes de chucknorris</title>
     <script lang="javascript">
             function presentar() {
-                document.body.querySelector("p").innerHTML='';
+                document.getElementById("resultados").innerHTML='';
                 fetch('https://api.chucknorris.io/jokes/random')
                     .then(response => response.json())
                     .then(json => {
-                        document.body.querySelector("p").innerHTML=json.value;
+                        document.getElementById("resultados").innerHTML=json.value;
                     })
                     .catch(err => console.log('Solicitud fallida', err));
             }
