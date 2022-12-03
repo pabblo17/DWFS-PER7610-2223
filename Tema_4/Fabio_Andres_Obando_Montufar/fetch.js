@@ -12,7 +12,7 @@ function consultarApi(){
 }
 
 function changeColor(newColor) {
-   var elem = document.getElementById('para');
+   var elem = document.getElementById('paraa');
    elem.innerHTML = 'jojojo';
    elem.style.color = newColor;
 }
