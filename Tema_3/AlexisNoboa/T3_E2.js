@@ -14,23 +14,13 @@
  * 
  * Ejemplo: duplicador([1,2,3,4]) -> [4,8]
  */
-
 console.log('Funcion1');
-
 let arreglo=[1,2,3,4];
-
 const duplicador =(arreglo)=>{
-
-    arreglo=arreglo.filter(a => a%2==0);
-
-    arreglo=arreglo.map(valor=>valor*2);
-
+    arreglo=arreglo.filter(a => a%2==0).map(valor=>valor*2);
     return arreglo;
 }
-
 console.log(duplicador([1,2,3,4]));
-
-
 /**
  * Funcion 2
  * 
@@ -40,26 +30,16 @@ console.log(duplicador([1,2,3,4]));
  * 
  * Ejemplo: media([1,2,3,4]) -> 2.5
  */
-
  console.log('Funcion2');
-
  function media(arreglo){
-
     let num=0;
     let lon=arreglo.length;
-
     arreglo.forEach((elemento,indice)=>{
-
         num+=elemento;
     });
-
     return num/lon;
-
-
  }
-
 console.log(media([1,2,3,4]));
-
 /**
  * Funcion 3
  * 
@@ -72,55 +52,30 @@ console.log(media([1,2,3,4]));
  */
 
  console.log('Funcion3');
-
-
  function eliminarDuplicados(arreglo){
-
     let cont=0;
     //let arreglo2=arreglo;
     //let aux=arreglo2.join();
     const Set1=new Set();
-
     //console.log(aux);
-
     arreglo.forEach((elemento,indice)=>{
-
         arreglo.forEach((elem)=>{
-
             if(elemento==elem)
                 cont++;
-
         })
-
         if(cont==1) {
             Set1.add(elemento);
             cont=0;
         }
-
         if(cont>=2){
             cont=0;
         }
-
- 
     });
-
-
-
     //console.log(Set1);
-
     const arreglo2=Array.from(Set1);
-
-
-
-
     return arreglo2;
-
-
  }
-
 console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]));
-
-
 /**
  * Funcion 4
  * 
@@ -140,17 +95,12 @@ console.log(eliminarDuplicados([5,1,2,1,3,3,4,5]));
  */
 
 //convertir en array una cadena let array=Array.from(cadena);
-
 console.log('Funcion4');
-
 function nCharConsec(c, num, frase){
-
     let array=Array.from(frase);
     let cont=0;
     let condicion=false;
-
     array.forEach((elemento,indice)=>{
-
         if(elemento==c){
             cont++;
             if(cont==num)
@@ -159,13 +109,9 @@ function nCharConsec(c, num, frase){
             cont=0;
         }
     });
-
     return condicion;
 }
-
-
 console.log(nCharConsec('*', 4, "Est* * **** es un ejemplo"));
-
 /**
  * Funcion 5
  * 
@@ -189,16 +135,11 @@ console.log(nCharConsec('*', 4, "Est* * **** es un ejemplo"));
  * [7, 5] (2+6+7 /3 = 5)
  * [1, 4] (2+6+7+1 /4 = 4)
  */
-
 console.log('Funcion5');
-
 function generador(dimension){
-
     let lista=[];
     let clave=[];
-
     //let lista=new Array(dimension);
-
     let arreglo=[];
     let numero=0;
     const Set1=new Set();
@@ -206,63 +147,32 @@ function generador(dimension){
     let media=0.0;
     let contador=0;
     let acumulador=0;
-
     for(let i=0;i<dimension;i++){
-
         numero=Math.floor(10*Math.random());
         //console.log(numero);
         lista.push(numero);
     }
-
     lista.forEach((elemento)=>{
-
         Set1.add(elemento);
-
     });
-
     arreglo=Array.from(Set1);
-
     console.log(arreglo);
-
-
     arreglo.forEach((elemento,index)=>{
-
         if(index==0){
-
             media=elemento/2;
             clave=[elemento,media];
             map.set(clave,media);
-
             contador=index+1;
             acumulador=elemento;
-
         }else{
-
             acumulador+=elemento;
             contador=index+1;
             media=acumulador/contador;
             clave=[elemento,media];
             map.set(clave,media);
-
-            
-
         }
-
-        
-         
-
-
     });
-
-
-
     //console.log(map);
-
     return map;
-
-
-    
-
 }
-
 console.log(generador(6));

@@ -222,13 +222,7 @@ function suggest(requestSize) {
         show(); 
         interfazCaptura.close();
     }
-        
-
-
     });
-
-
-
 }
 
 

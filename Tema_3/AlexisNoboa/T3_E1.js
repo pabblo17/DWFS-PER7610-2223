@@ -14,47 +14,23 @@
  * 
  * Ejemplo: obtenerLetraDni(50487965) -> 50487965K
  */
-var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
-
-
- 
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T']; 
 function obtenerLetraDni(dni){
-
-    
-
     let resultado='';
     let resto=0;
     let letra="";
-
-
     if(dni>0 && dni <99999999){
-
-        //console.log(dni);
-
         resto=dni%23;
-
-        for(let i=0;i<letras.length;i++){
-
-            if(i==resto)
-                letra=letras[i];
-        }
-
-        //console.debug(letra);
+        letra=letras[resto];
         resultado=dni+letra;
         return resultado;
-
     }else{
-
         resultado=null;
         return resultado;
-
     } 
-
  }
-
 console.log('Funcion1'); 
 console.log(obtenerLetraDni(50487965));
-
 /**
  * Funcion 2
  * 
@@ -66,20 +42,14 @@ console.log(obtenerLetraDni(50487965));
  * 
  * Ejemplo: esPar(4) -> true
  */
-
-
  const esPar = (num) =>{
-
     if(num%2==0)
         return true;
     else
         return false;
-
  }
-
  console.log('Funcion2');
  console.log(esPar(2));
-
 /**
  * Funcion 3
  * 
@@ -92,24 +62,18 @@ console.log(obtenerLetraDni(50487965));
  * Ejemplo: formatStr("Esto es un Ejemplo") -> "ESToeSuNEJeMPLo"
  */
  const formatStr=(frase)=>{
-
     let resultado='';
     let letra='';
     let vocales=['a','e','i','o','u','A','E','I','O','U'];
     let coincide=false;
-
     aux=frase.split(' ').join("");
-    //aux=aux.toLowerCase();
-
     for(let i=0;i<aux.length;i++){
         letra=aux.charAt(i);
-
         for(let j=0;j<vocales.length;j++){
             
             if(letra==vocales[j])
                 coincide=true;
         }
-
         if(coincide){
             resultado+=letra;
             coincide=false;
@@ -117,18 +81,11 @@ console.log(obtenerLetraDni(50487965));
             letra=letra.toUpperCase();
             resultado+=letra;  
         }
-
     }
-
     return resultado;
-
  }
-
-
 console.log('Funcion3');
 console.log(formatStr("Esto es un Ejemplo"));
-
-
 /**
  * Funcion 3
  * 
@@ -143,28 +100,18 @@ console.log(formatStr("Esto es un Ejemplo"));
  */
 
  const esPalindromo=(frase)=>{
-
     let f='';
     let invertida='';
-
     f=frase.split(" ").join("");
-
     for(let i=f.length-1;i>=0;i--){
-
         invertida+=f.charAt(i);
     }
-
     f=f.toLowerCase();
     invertida=invertida.toLowerCase();
-    //console.log(f);
-    //console.log(invertida);
-
     if(f==invertida){
         return true;
     }else
         return false;    
-
  }
-
 console.log('Funcion4');
 console.log(esPalindromo("hola"));
