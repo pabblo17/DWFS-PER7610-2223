@@ -18,10 +18,7 @@ var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', '
 
 function obtenerLetraDni(dni){
     let dniLetterPosition=dni%23;
-    if(dniLetterPosition<letras.length){
-        return dni+letras[dniLetterPosition];
-    }
-    return null;
+    return dni+letras[dniLetterPosition];
 }
 
 console.log(obtenerLetraDni(243434534535));

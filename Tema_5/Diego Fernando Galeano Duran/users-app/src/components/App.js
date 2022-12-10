@@ -1,6 +1,6 @@
-import './App.css';
-import Navbar from './components/navbar/Navbar';
-import Card from './components/card/Card';
+import '../styles/App.css';
+import Navbar from './navbar/Navbar';
+import Card from './card/Card';
 
 const itemsData=[{
     image:"https://upload.wikimedia.org/wikipedia/commons/a/ab/Gentau_Pic_du_Midi_Ossau.jpg",
