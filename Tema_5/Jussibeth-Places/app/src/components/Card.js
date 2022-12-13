@@ -1,6 +1,6 @@
 import "./../styles/Card.css";
 import heartland from "./../heartland.jpg";
-export const tarjeta = () => {
+export const Card = () => {
   return (
     <div className="row principal vh-80">
       <div className="col-lg-4 justify-content-center mx-auto vh-80 p-3 ">
@@ -41,4 +41,4 @@ export const tarjeta = () => {
   );
 };
 
-export default tarjeta;
+export default Card;

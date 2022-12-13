@@ -1,6 +1,6 @@
 import "./../styles/Navbar.css";
 
-export const menu = () => {
+export const Navbar = () => {
   return (
     <div className="row menunavegacion">
       <div className="col-lg-12">
@@ -63,4 +63,4 @@ export const menu = () => {
   );
 };
 
-export default menu;
+export default Navbar;
