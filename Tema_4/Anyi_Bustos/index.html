@@ -16,6 +16,23 @@
                 theme.setAttribute('href', 'style.css');
             }
         }
+
+        window.onload=function(){
+            var bod=document.body.childNodes;
+            for (var i=0; i<bod.length;i++){
+                console.log(bod[i].nodeName)
+
+                var bod_child=bod[i].childNodes;
+                for (var j=0; j<bod_child.length;j++){
+                    console.log('  ', bod_child[j].nodeName)
+
+                    var bod_child_child=bod_child[j].childNodes;
+                    for (var k=0; k<bod_child_child.length;k++){
+                        console.log('      ', bod_child_child[k].nodeName)
+                    }
+                }
+            }
+        }
 </script>
 
 <head>
