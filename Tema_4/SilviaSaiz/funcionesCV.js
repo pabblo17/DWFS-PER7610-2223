@@ -10,17 +10,6 @@ window.onload = function () {
         }
     })
 
-    function logHtmlElements(container, text_to_log, tab) {
-        let elementsOnContainer = container.childNodes;
-        if (elementsOnContainer.length > 0) {
-            elementsOnContainer.forEach(element => {
-                text_to_log += "\n" + tab + element.nodeName;
-                console.loglogHtmlElements(element, text_to_log, tab + "     ");
-            })
-        }
-        return text_to_log;
-    }
-
     function GetElementosStr(elemento, tabulacion = "") {
         console.log(tabulacion + elemento.nodeName + "\n")
         let elementosHijos = elemento.childNodes;
