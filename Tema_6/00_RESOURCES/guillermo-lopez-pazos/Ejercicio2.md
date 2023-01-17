@@ -1,5 +1,6 @@
 **Ejercicicio 2: Calculadora**
-***Recursos***
+
+**Recursos**
 
 | Método HTTP | URI | Body | Respuesta |
 | ----------- | --- | ---- | --------- |
